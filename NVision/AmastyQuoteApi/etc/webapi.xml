@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) Amasty (https://www.amasty.com)
+ * @package Request a Quote Base for Magento 2
+ */-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/quote/" method="PUT">
+        <service class="NVision\AmastyQuoteApi\Api\QuoteManagementInterface" method="updateQuote"/>
+        <resources>
+            <resource ref="Amasty_RequestQuote::manage_quotes" />
+        </resources>
+    </route>
+    <route url="/V1/quote/" method="POST">
+        <service class="NVision\AmastyQuoteApi\Api\QuoteManagementInterface" method="createQuote"/>
+        <resources>
+            <resource ref="Amasty_RequestQuote::manage_quotes" />
+        </resources>
+    </route>
+</routes>

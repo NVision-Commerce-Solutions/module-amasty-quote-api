@@ -1,0 +1,27 @@
+{
+    "name": "nvision/magento2-amasty-quote-api",
+    "version": "1.0.0",
+    "description": "Custom endpoints to enhance Amasty Request a Quote API calls",
+    "config": {
+        "sort-packages": true
+    },
+    "type": "magento2-module",
+    "authors": [
+        {
+            "name": "NVision Commerce Solutions",
+            "email": "info@n.vision"
+        }
+    ],
+    "require": {
+        "magento/framework": "103.0.*",
+        "amasty/module-request-quote": "2.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "NVision\\AmastyQuoteApi\\": ""
+        }
+    }
+}

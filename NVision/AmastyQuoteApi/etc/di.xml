@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="NVision\AmastyQuoteApi\Api\QuoteManagementInterface"
+                type="NVision\AmastyQuoteApi\Model\Quote\QuoteManagement"/>
+    <type name="Amasty\RequestQuote\Model\Quote\CustomerAccount\ConvertCartItem">
+        <plugin name="ConvertCartItemPlugin"
+                type="NVision\AmastyQuoteApi\Plugin\ConvertCartItem"
+                sortOrder="1"/>
+    </type>
+</config>
